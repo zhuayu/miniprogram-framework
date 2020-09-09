@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="wrapper">
+    <button  
+      wx:if="{{!userInfo.id}}"
+      open-type="getUserInfo" 
+      bindgetuserinfo="handleGetUserInfo">
+      获取头像昵称 </button>
+    <button 
+      wx:else
+      open-type="getPhoneNumber" 
+      bindgetphonenumber="getPhoneNumber">
+      获取手机号</button>
+  </view>
+</view>
